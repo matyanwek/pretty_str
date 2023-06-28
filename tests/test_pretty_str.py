@@ -79,6 +79,25 @@ class TestPrettyStr(unittest.TestCase):
             pretty_str(f"{b_hello_str} {i_world_str}", "blue")
         )
 
+    def test_nested_default_attrs(self) -> None:
+        world = pretty_str(
+            "world",
+            ["default_face", "default_color", "default_bg_color"]
+        )
+        default_world = (
+            f"\033[{DEFAULT_FACE};{DEFAULT_COLOR};{DEFAULT_BG_COLOR}mworld\033[m"
+        )
+        self.assertEqual(default_world, world)
+        bold_blue_bg_red_str = (
+            f"\033[1;34;41mhello \033[m{default_world}\033[1;34;41m!\033[m"
+        )
+        self.assertEqual(
+            bold_blue_bg_red_str,
+            pretty_str(f"hello {world}!", ["bold", "blue", "bg_red"])
+
+        )
+
+
 
 if __name__ == "__main__":
     unittest.main()

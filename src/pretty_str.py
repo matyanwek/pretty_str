@@ -26,6 +26,8 @@ def _parse_control_nums(control_nums: str) -> Attrs:
 def _update_attrs(old_attrs: Attrs, new_attrs: Attrs) -> Attrs:
     """Update old_attr with new_attr if attr exists"""
     new_faces = old_attrs[0] | new_attrs[0]
+    if 0 in new_faces:
+        new_faces = {0}
     new_color = new_attrs[1] if new_attrs[1] else old_attrs[1]
     new_bg_color = new_attrs[2] if new_attrs[2] else old_attrs[2]
     return new_faces, new_color, new_bg_color
