@@ -68,15 +68,15 @@ def _parse_pretty_attrs(attrs: str | None | Iterable[str | None]=None) -> Attrs:
     for attr in attrs:
         if attr is None:
             continue
-        attr = attr.lower()
-        if attr in FACES:
-            face_codes.add(FACES[attr])
+        lattr = attr.lower()
+        if lattr in FACES:
+            face_codes.add(FACES[lattr])
             continue
-        elif attr in COLORS:
-            color_code = COLORS[attr]
+        elif lattr in COLORS:
+            color_code = COLORS[lattr]
             continue
-        elif attr in BG_COLORS:
-            bg_code = BG_COLORS[attr]
+        elif lattr in BG_COLORS:
+            bg_code = BG_COLORS[lattr]
             continue
         else:
             raise ValueError(f"Unrecognized pretty_str attribute: {attr}")
