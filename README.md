@@ -1,3 +1,3 @@
-# pretty_str.py
+# pretty_str
 
-A simple package to format strings for terminal output.
+A python package to format strings for terminal output.
