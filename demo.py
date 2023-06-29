@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from src.pretty_str import pretty_str
+from pretty_str import pretty_str
 
 # Pass in a string and an attribute:
 message1 = pretty_str("Hello world!", "bold")

@@ -2,6 +2,23 @@
 
 A python package to format strings for terminal output.
 
+## Installation
+
+To install, clone the git repository, then build the package and install with pip:
+```console
+$ git clone https://github.com/matyanwek/pretty_str
+$ cd pretty_str
+$ python3 setup.py bdist_wheel
+$ pip3 install .
+```
+
+The cloned git directory can then be deleted.
+
+To uninstall, use pip:
+```console
+$ pip3 uninstall pretty-str
+```
+
 ## Usage
 
 Import the `pretty_str` function and pass in a string and an attribute:

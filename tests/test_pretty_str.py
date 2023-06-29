@@ -1,7 +1,11 @@
 import unittest
 
-from src.pretty_str import pretty_str
-from src.ansi_codes import DEFAULT_FACE, DEFAULT_COLOR, DEFAULT_BG_COLOR
+from src.pretty_str.pretty_str import pretty_str
+from src.pretty_str.ansi_codes import (
+    DEFAULT_FACE,
+    DEFAULT_COLOR,
+    DEFAULT_BG_COLOR,
+)
 
 
 class TestPrettyStr(unittest.TestCase):
